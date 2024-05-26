@@ -48,14 +48,6 @@ document.getElementById('nextBtn').addEventListener('click', () => {
     wealtheonImages[wealtheonCurrentImageIndex].classList.add('active');
 });
 
-let slideIndex = 0;
-showSlides();
 
-
-
-function currentSlide(n) {
-    slideIndex = n;
-    showSlides();
-}
 
 
