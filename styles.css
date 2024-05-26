@@ -1,0 +1,245 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    background-color: #4d74a1; /* Mellow Blue */
+    color: #f0f0f0;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin: 0.5rem 0;
+}
+
+.subtitle {
+    font-weight: 300;
+    margin: 0.2rem 0 1rem;
+}
+
+.toc {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    width: 200px;
+    position: fixed;
+    top: 300px; /* Adjust to place below the sidebar */
+    left: 15px; /* Adjust the left position to align with sidebar */
+}
+
+.toc h3 {
+    margin-bottom: 0.5rem;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc li {
+    margin: 0.5rem 0;
+}
+
+.toc a {
+    color: #4d74a1; /* Mellow Blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+.articles {
+    background-color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.article {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block; /* Ensure images are displayed */
+}
+
+.article img.hidden {
+    display: none; /* Hide images initially */
+}
+
+.article#wealtheon-article img {
+    display: none; /* Hide Wealtheon images initially */
+}
+
+.article#wealtheon-article img.active {
+    display: block; /* Show active Wealtheon image */
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.nav-buttons button {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    color: #4d74a1; /* Mellow Blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #4d74a1; /* Mellow Blue for consistency */
+    color: #f0f0f0;
+    width: 100%;
+    position: fixed; /* Makes the footer stay at the bottom */
+    bottom: 0; /* Aligns the footer to the bottom of the page */
+    left: 0;
+}
+
+.sidebar {
+    height: 150px; /* Set a fixed height */
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4d74a1; /* Mellow Blue for consistency */
+    padding-top: 80px; /* Increase the space for the toggle button */
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f0f0f0;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.toggle-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #4d74a1;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
+
+.sidebar.show {
+    transform: translateX(0);
+}
+
+.news-slideshow {
+    position: fixed;
+    top: 300px;
+    right: 15px;
+    width: 600px;  /* Increase width */
+    height: 800px;  /* Increase height */
+    background-color: #f7f7f7;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    color: #333;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+.iframe-slide {
+    width: 100%;
+    height: 90%;  /* Increase height */
+    border: none;
+}
+
