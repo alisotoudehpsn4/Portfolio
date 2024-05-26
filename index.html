@@ -6,9 +6,8 @@
     <title>Ali Sotoudeh - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 </head>
 <body>
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
@@ -25,65 +24,69 @@
             <p class="subtitle">Software Developer</p>
         </div>    
     </header>
-    
-    
-
     <br>
-
-
-    <div class="toc">
-        <h3>Table of Contents</h3>
+    <div class="toc" style="font-size: 24px; line-height: 1.5; background-color: #f7f7f7; min-height: 900px;">
+        <h3 style="font-size: 24px;">Table of Contents</h3>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#wealtheon-article">Wealtheon Project</a></li>
+            <li><a href="#about" style="font-size: 24px;">About Me</a></li>
+            <li><a href="#education" style="font-size: 24px;">Education</a></li>
+            <li><a href="#wealtheon-article" style="font-size: 24px;">Wealtheon Project</a></li>
         </ul>
     </div>
+    
+    
 
     <div class="articles">
         <div class="container">
-            <div class="article" id="about">
+            <div class="article" id="about" style="max-width: 800px; margin: 0 auto;">
                 <img src="2.jpg" alt="Coding Image">
-                <h2>Passionate About Web Development</h2>
-                <p>
+                <h2 style="font-size: 36px;">Passionate About Web Development</h2>
+                <br>
+                <p style="font-size: 24px; line-height: 1.5;">
                     Hi, I'm Ali Sotoudeh, a recent graduate from Monash University, Melbourne, originally from Iran. I hold a degree in Information Technology with a major in Software Development. My journey in software development has been both challenging and exciting. With a keen interest in crafting elegant and efficient solutions, I am constantly honing my skills to stay at the forefront of the ever-evolving tech landscape.
                 </p>
             </div>
+            <br>
 
-            <div class="article" id="education">
+            <div class="article" id="education" style="max-width: 800px; margin: 0 auto;">
                 <img src="3.jpg" alt="Studying Image">
-                <h2>Graduate of Monash University</h2>
-                <p>
+                <h2 style="font-size: 36px;">Graduate of Monash University</h2>
+                <br>
+                <p style="font-size: 24px; line-height: 1.5;">
                     Having completed my academic journey at Monash University, I reflect on the valuable experiences and knowledge gained throughout my studies. From foundational principles to advanced topics, my time at Monash has equipped me with a solid understanding of Software and Web Development and a passion for continuous learning.
                 </p>
             </div>
+            <br>
 
-            <div class="article" id="wealtheon-article">
-                <img src="4.jpg" alt="Wealtheon Project" class="active">
-                <img src="5.jpg" alt="Wealtheon Project">
-                <img src="6.jpg" alt="Wealtheon Project">
-                <img src="7.jpg" alt="Wealtheon Project">
-                <img src="8.jpg" alt="Wealtheon Project">
+            <div class="article" id="wealtheon-article" style="max-width: 800px; margin: 0 auto; position: relative;">
+                <img src="4.jpg" alt="Wealtheon Project" class="fade active">
+                <img src="5.jpg" alt="Wealtheon Project" class="fade">
+                <img src="6.jpg" alt="Wealtheon Project" class="fade">
+                <img src="7.jpg" alt="Wealtheon Project" class="fade">
+                <img src="8.jpg" alt="Wealtheon Project" class="fade">
+                
                 <div class="nav-buttons">
-                    <button id="prevBtn">&larr;</button>
-                    <button id="nextBtn">&rarr;</button>
+                    <div class="nav-buttons" style="margin-top: -200px;">
+                        <button id="prevBtn" style="font-size: 25px; padding: 5px 10px;">&larr;</button>
+                        <button id="nextBtn" style="font-size: 25px; padding: 5px 10px;">&rarr;</button>
+                    </div>
+                    
+                    
                 </div>
-                <h2>Wealtheon - Full Stack Web Developer</h2>
-                <p>
-                    February 2024 – June 2024: In my recent web development project, I was responsible for creating and maintaining the database, ensuring efficient data storage and retrieval. I handled all aspects of front-end development, including UI/UX design and implementation. Additionally, I managed client communication, gathering requirements and providing regular updates. I operated within an Agile workflow, participating in sprint planning, daily stand-ups, and iterative development cycles. The project involved developing an educational platform for wealtheon.com.au, as requested by our client to enhance their existing website Wealtheon. You can explore the project and its features by visiting the <a href="https://wealtheon.au" class="project-link" target="_blank">website</a>.
+                <h2 style="font-size: 36px;">Wealtheon - Full Stack Web Developer</h2>
+                <br>
+                <p style="font-size: 24px; line-height: 1.5;">
+                    February 2024 – June 2024: In my recent web development project, I was responsible for creating and maintaining the database, ensuring efficient data storage and retrieval. I handled all aspects of front-end development, including UI/UX design and implementation. Additionally, I managed client communication, gathering requirements and providing regular updates. I operated within an Agile workflow, participating in sprint planning, daily stand-ups, and iterative development cycles. The project involved developing an educational platform for wealtheon.com.au, as requested by our client to enhance their existing website Wealtheon. You can explore the project and its features by visiting the <a href="https://wealtheon.au" class="project-link" target="_blank" style="font-size: 24px;">website</a>.
                 </p>
             </div>
+            <br>
         </div>
     </div>
-
-
-    
-    
-
     <footer>
         <p>&copy; 2024 Ali Sotoudeh</p>
     </footer>
 
     <script src="script.js"></script>
+    
 </body>
 </html>

@@ -292,6 +292,15 @@ body {
         bottom: 0;
         left: 0;
     }
+
+    .nav-buttons {
+        margin-top: -200px; /* Adjust this value to push the buttons up in mobile view */
+    }
+
+    .nav-buttons button {
+        font-size: 12px; /* Smaller font size for buttons in mobile view */
+        padding: 2px; /* Adjust padding for smaller buttons */
+    }
 }
 
 header {
@@ -321,5 +330,17 @@ h1 {
     font-weight: 300;
     margin: 0.2rem 0 1rem;
 }
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade.active {
+    opacity: 1;
+}
+
+
+
 
 
