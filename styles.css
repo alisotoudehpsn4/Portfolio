@@ -44,19 +44,90 @@ header {
     margin-bottom: 1rem;
 }
 
-h1 {
-    margin: 0.5rem 0;
-    font-size: 2.5rem;
-    color: #4178A3; /* Complementary Dark Blue */
-}
-
-
 .subtitle {
     font-weight: 300;
     margin: 0.2rem 0 1rem;
     font-size: 1.2rem;
-    color: #6A9EC9; /* Darker Light Blue */
+    color: #4A708B; /* Darker Blue */
 }
+
+h1 {
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+    color: #1F4E79; /* Navy Blue */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem; /* Add padding for better spacing */
+    text-align: center;
+    background-color: #fff; /* Ensure a clean background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Profile Picture */
+.profile-pic {
+    border-radius: 50%;
+    width: 150px; /* Increase size for better visibility */
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Name */
+h1 {
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+    color: #1F4E79; /* Navy Blue */
+}
+
+/* Subtitle */
+.subtitle {
+    font-weight: 300;
+    margin: 0.2rem 0 1rem;
+    font-size: 1.5rem; /* Slightly larger for better readability */
+    color: #4A708B; /* Darker Blue */
+}
+
+/* Tagline */
+.tagline {
+    font-size: 1rem; /* Adjusted font size */
+    color: #505050; /* Darker Gray */
+    margin: 0.5rem 0 1.5rem; /* Adjusted margin */
+    font-style: italic; /* Add italic style for emphasis */
+    text-align: center; /* Center align the tagline */
+}
+
+
+
+
+/* Contact Info */
+.contact-info {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between contact items */
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+}
+
+.contact-item {
+    font-size: 1rem; /* Adjusted font size */
+    color: #333333; /* Charcoal Gray */
+    display: flex;
+    align-items: center;
+}
+
+.contact-item i {
+    margin-right: 6px; /* Smaller margin */
+    color: #1F4E79; /* Navy Blue for icons */
+}
+
+
+
+
 
 
 
