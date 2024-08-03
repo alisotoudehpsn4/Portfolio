@@ -9,93 +9,80 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=3">
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-    <div class="sidebar" id="sidebar">
-        <a href="CV-July.pdf" target="_blank">Resume</a>
-        <a href="mailto:alisotoudehpsn4@gmail.com">Email Me</a>
-        <a href="https://www.linkedin.com/in/ali-sotoudeh-0aaa562b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
-        <a href="https://github.com/alisotoudehpsn4" target="_blank">GitHub</a>
-    </div>
-
     <header>
-        <div class="container" style="text-align: center; position: relative; left: 0.40%;">
+        <div class="container">
             <img src="profilepicture.jpg" alt="Ali Sotoudeh" class="profile-pic">
             <h1>Ali Sotoudeh</h1>
             <p class="subtitle">Software Developer</p>
-        </div>    
+        </div>
     </header>
-    <br>
-    <div class="toc" style="font-size: 24px; line-height: 1.5; background-color: #f7f7f7; min-height: 900px;">
-        <h3 style="font-size: 24px;">Table of Contents</h3>
+
+    <div class="sidebar" id="sidebar">
+        <a href="CV-July.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="mailto:alisotoudehpsn4@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="https://www.linkedin.com/in/ali-sotoudeh-0aaa562b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/alisotoudehpsn4" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+    
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
         <ul>
-            <li><a href="#about" style="font-size: 24px;">About Me</a></li>
-            <li><a href="#education" style="font-size: 24px;">Education</a></li>
-            <li><a href="#wealtheon-article" style="font-size: 24px;">Wealtheon Project</a></li>
-            <li><a href="#codecamp-article" style="font-size: 24px;">CodeCamp </a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#wealtheon-article">Wealtheon Project</a></li>
+            <li><a href="#codecamp-article">Code Camp</a></li>
         </ul>
     </div>
 
     <div class="articles">
         <div class="container">
-            <div class="article" id="about" style="max-width: 800px; margin: 0 auto;">
-                <img src="2.jpg" alt="Coding Image">
-                <br>
-                <h2 style="font-size: 36px;">Passionate About Web Development</h2>
-                <br>
-                <p style="font-size: 24px; line-height: 1.5;">
+            <div class="article" id="about">
+                <img src="2.jpg" alt="Coding">
+                <h2>Passionate About Web Development</h2>
+                <p>
                     Hi, I'm Ali Sotoudeh, a recent graduate from Monash University, Melbourne, originally from Iran. I hold a degree in Information Technology with a major in Software Development. My journey in software development has been both challenging and exciting. With a keen interest in crafting elegant and efficient solutions, I am constantly honing my skills to stay at the forefront of the ever-evolving tech landscape.
                 </p>
             </div>
-            <br>
-            <br>
 
-            <div class="article" id="education" style="max-width: 800px; margin: 0 auto;">
-                <img src="3.jpg" alt="Studying Image">
-                <br>
-                <h2 style="font-size: 36px;">Graduate of Monash University</h2>
-                <br>
-                <p style="font-size: 24px; line-height: 1.5;">
+            <div class="article" id="education">
+                <img src="3.jpg" alt="Studying">
+                <h2>Graduate of Monash University</h2>
+                <p>
                     Having completed my academic journey at Monash University, I reflect on the valuable experiences and knowledge gained throughout my studies. From foundational principles to advanced topics, my time at Monash has equipped me with a solid understanding of Software and Web Development and a passion for continuous learning.
                 </p>
             </div>
-            <br>
-            <br>
 
-            <div class="article" id="wealtheon-article" style="max-width: 800px; margin: 0 auto; position: relative;">
-                <img src="4.jpg" alt="Wealtheon Project" class="fade active">
-                <img src="5.jpg" alt="Wealtheon Project" class="fade">
-                <img src="6.jpg" alt="Wealtheon Project" class="fade">
-                <img src="7.jpg" alt="Wealtheon Project" class="fade">
-                <img src="8.jpg" alt="Wealtheon Project" class="fade">
-
-                <div class="nav-buttons">
-                    <div class="nav-buttons" style="margin-top: -450px;">
-                        <button id="prevBtn" style="font-size: 25px; padding: 5px 10px;">&larr;</button>
-                        <button id="nextBtn" style="font-size: 25px; padding: 5px 10px;">&rarr;</button>
+            <div class="article" id="wealtheon-article">
+                <div class="slideshow-container">
+                    <img src="4.jpg" alt="Wealtheon Project" class="fade active">
+                    <img src="5.jpg" alt="Wealtheon Project" class="fade">
+                    <img src="6.jpg" alt="Wealtheon Project" class="fade">
+                    <img src="7.jpg" alt="Wealtheon Project" class="fade">
+                    <img src="8.jpg" alt="Wealtheon Project" class="fade">
+            
+                    <div class="nav-buttons">
+                        <button id="prevBtn">&larr;</button>
+                        <button id="nextBtn">&rarr;</button>
                     </div>
                 </div>
-                <br>
-                <h2 style="font-size: 36px;">Wealtheon - Full Stack Web Developer</h2>
-                <br>
-                <p style="font-size: 24px; line-height: 1.5;">
-                    February 2024 – June 2024: In my recent web development project, I was responsible for creating and maintaining the database using <span style="color: #1E90FF;"><strong>SQL</strong></span>, ensuring efficient data storage and retrieval. I handled all aspects of front-end development, including UI/UX design and implementation, utilizing <span style="color: #1E90FF;"><strong>HTML</strong></span>, <span style="color: #1E90FF;"><strong>CSS</strong></span>, and <span style="color: #1E90FF;"><strong>JavaScript</strong></span>. I also developed the back-end with <span style="color: #1E90FF;"><strong>CakePHP</strong></span>, integrating it seamlessly with the front-end and database. Additionally, I managed client communication, gathering requirements and providing regular updates. I operated within an Agile workflow, participating in sprint planning, daily stand-ups, and iterative development cycles. The project involved developing an educational platform for wealtheon.com.au, as requested by our client to enhance their existing website Wealtheon. You can explore the project and its features by visiting the <a href="https://wealtheon.au" class="project-link" target="_blank" style="font-size: 24px;">website</a>.
+
+                <h2>Wealtheon - Full Stack Web Developer</h2>
+                <p>
+                    February 2024 – June 2024: In my recent web development project, I was responsible for creating and maintaining the database using <strong>SQL</strong>, ensuring efficient data storage and retrieval. I handled all aspects of front-end development, including UI/UX design and implementation, utilizing <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. I also developed the back-end with <strong>CakePHP</strong>, integrating it seamlessly with the front-end and database. Additionally, I managed client communication, gathering requirements and providing regular updates. I operated within an Agile workflow, participating in sprint planning, daily stand-ups, and iterative development cycles. The project involved developing an educational platform for wealtheon.com.au, as requested by our client to enhance their existing website Wealtheon. You can explore the project and its features by visiting the <a href="https://wealtheon.au" class="project-link" target="_blank">website</a>.
                 </p>
             </div>
-            <br>
-            <br>
 
-            <div class="article" id="codecamp-article" style="max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 36px;">CodeCamp - Afterschool Facilitator</h2>
-                <br>
-                <p style="font-size: 24px; line-height: 1.5;">
+            <div class="article" id="codecamp-article">
+                <h2>Code Camp - Afterschool Facilitator</h2>
+                <p>
                     July 2024 – Present: Facilitating coding education for children, focusing on fundamental programming concepts and fostering a positive and engaging learning environment. Planning and executing lessons, assisting students with coding projects, and providing constructive feedback to enhance their skills. Playing a pivotal role in inspiring and nurturing students' interest in technology and programming.
                 </p>
             </div>
-            
-            <br>
-            <br>
         </div>
     </div>
 
@@ -104,6 +91,5 @@
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
