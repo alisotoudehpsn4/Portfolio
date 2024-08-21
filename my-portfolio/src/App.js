@@ -10,7 +10,6 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Set the loaded state to true after the initial render
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 100); // Short delay to ensure the animation starts after the components are rendered
@@ -20,12 +19,14 @@ function App() {
 
   return (
     <div className={`app-container ${isLoaded ? 'loaded' : ''}`}>
-      <Header />
       <Sidebar />
-      <main className="content">
-        <Articles />
-      </main>
-      <Footer />
+      <div className={`main-content ${isLoaded ? 'loaded' : ''}`}>
+        <Header />
+        <main className="content">
+          <Articles />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
