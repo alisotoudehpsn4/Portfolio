@@ -54,12 +54,10 @@ a::before {
   transition: transform 0.3s ease-in-out; /* Smooth transition for the underline */
 }
 
-
 a:hover::before {
   visibility: visible; /* Show the underline */
   transform: scaleX(1); /* Animate the underline */
 }
-
 
 /* Buttons */
 button {
@@ -74,8 +72,18 @@ button {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-
 button:focus {
   outline: none;
+}
+
+/* Animation for App Load */
+.app-container > * {
+  opacity: 0; /* Initial state for animation */
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.app-container.loaded > * {
+  opacity: 1;
+  transform: translateY(0);
 }
