@@ -1,31 +1,40 @@
+/* Ensure all elements account for padding and border in the width and height */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Header Styles */
 .header {
-    width: 100%;
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-  }
-  
-  .subtitle {
-    font-weight: 300;
-    color: #ccc;
-  }
-  
-  .tagline {
-    color: #eee;
-    font-style: italic;
-    margin-bottom: 20px;
-  }
-  
+  width: 100%;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #333;
+  color: #fff;
+  overflow-x: hidden; /* Prevent overflow on the x-axis */
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* Add some padding to prevent content from touching edges */
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-weight: 300;
+  color: #ccc;
+}
+
+.tagline {
+  color: #eee;
+  font-style: italic;
+  margin-bottom: 20px;
+}

@@ -21,17 +21,16 @@ function Slideshow({ images, autoPlay = true, autoPlayTime = 3000 }) {
 
   return (
     <div className="slideshow-container">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`slide ${index === currentIndex ? 'active-slide' : ''}`}
-        >
-          <img
-            src={image}
-            alt={`Slide ${index + 1}`}
-          />
-        </div>
-      ))}
+      <div
+        className="slides-wrapper"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <div className="slide" key={index}>
+            <img src={image} alt={`Slide ${index + 1}`} />
+          </div>
+        ))}
+      </div>
       <div className="nav-buttons">
         <button onClick={prevSlide}>&larr;</button>
         <button onClick={nextSlide}>&rarr;</button>

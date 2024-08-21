@@ -1,3 +1,4 @@
+/* Footer Styles */
 .footer {
     width: 100%;
     text-align: center;
@@ -6,5 +7,17 @@
     color: #fff;
     position: relative;
     bottom: 0;
+    overflow-x: hidden; /* Prevent overflow on the x-axis */
+    padding: 20px 15px; /* Add some padding to prevent content from touching edges */
   }
   
+  /* Media Queries for Mobile View */
+  @media (max-width: 600px) {
+    .header, .footer {
+      padding: 30px 10px; /* Reduce padding for mobile view */
+    }
+  
+    .header-container {
+      padding: 0 10px; /* Reduce padding for mobile view */
+    }
+  }
