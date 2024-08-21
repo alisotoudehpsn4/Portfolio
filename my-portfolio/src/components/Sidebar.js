@@ -17,12 +17,7 @@ function Sidebar() {
       <div className="sidebar" id="sidebar">
         <a href={resume} target="_blank" rel="noopener noreferrer"><i className="fas fa-file-alt"></i> Resume</a>
         <div className="sidebar-divider"></div>
-        <div className="current-project">
-          <h3>Current Project</h3>
-          <p>ExpenseMate - Expense Tracker App</p>
-          <a href="https://github.com/alisotoudehpsn4/expensemate" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-        </div>
-        <div className="sidebar-divider"></div>
+       
         <div className="table-of-contents">
           <h3>Table of Contents</h3>
           <ul>

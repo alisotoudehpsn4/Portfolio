@@ -76,14 +76,3 @@ button:focus {
   outline: none;
 }
 
-/* Animation for App Load */
-.app-container > * {
-  opacity: 0; /* Initial state for animation */
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.app-container.loaded > * {
-  opacity: 1;
-  transform: translateY(0);
-}
