@@ -4,8 +4,6 @@ import './Slideshow.css';
 function Slideshow({ images, autoPlay = true, autoPlayTime = 3000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  console.log('Current Image:', images[currentIndex]); // Debugging line
-
   const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   }, [images.length]);
@@ -26,12 +24,11 @@ function Slideshow({ images, autoPlay = true, autoPlayTime = 3000 }) {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`slide ${index === currentIndex ? 'active' : 'inactive'}`}
+          className={`slide ${index === currentIndex ? 'active-slide' : ''}`}
         >
           <img
             src={image}
             alt={`Slide ${index + 1}`}
-            className="slide-image"
           />
         </div>
       ))}
