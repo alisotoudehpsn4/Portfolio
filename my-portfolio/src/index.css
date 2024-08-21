@@ -1,13 +1,66 @@
-body {
+/* Global Styles - index.css */
+
+/* Universal Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
 }
 
-* {
-  box-sizing: border-box;
+/* Global Font and Background */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional, clean font */
+  font-size: 16px;
+  color: #2c3e50; /* Dark, modern text color */
+  background-color: #ecf0f1; /* Subtle, light background */
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* You can add additional global styles here */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font for headings */
+  color: #34495e; /* Slightly darker for better contrast */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase; /* Adds a modern touch */
+  letter-spacing: 1px; /* Enhances readability */
+}
+
+/* Links */
+a {
+  color: #e74c3c; /* Bold, standout link color */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #c0392b; /* Darken on hover */
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
