@@ -4,7 +4,8 @@ import './Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Ali Sotoudeh</p>
+        <p>&copy; 2024 Ali Sotoudeh. All rights reserved.</p>
+        <p>Designed and built from scratch by Ali Sotoudeh.</p>
     </footer>
   );
 }

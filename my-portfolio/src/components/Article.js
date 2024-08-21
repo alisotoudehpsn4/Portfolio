@@ -1,6 +1,7 @@
 import React from 'react';
 import './Article.css';
 import Slideshow from './Slideshow';  // Import the Slideshow component
+
 import aboutImage from '../assets/images/about.jpg';
 import educationImage from '../assets/images/education.jpg';
 import wealtheonImage1 from '../assets/images/w1.jpg';
@@ -13,12 +14,24 @@ import taskifyImage from '../assets/images/taskify-screenshot.jpg';
 import compLetterPDF from '../assets/Comp-Letter.pdf';
 import transcriptPDF from '../assets/Transcript.pdf';
 
+function openImageInNewTab(imageUrl) {
+  window.open(imageUrl, '_blank');
+}
+
 function Article({ id, title, content, image, link, pdfLinks, galleryImages }) {
   return (
     <div className="article" id={id}>
-      {image && <img src={image} alt={title} className="article-image" />}
+      {image && (
+        <img 
+          src={image} 
+          alt={title} 
+          className="article-image"
+          onClick={() => openImageInNewTab(image)} // Opens the image in a new tab when clicked
+          style={{ cursor: 'pointer' }} // Changes cursor to indicate clickability
+        />
+      )}
       <h2 className="article-title">{title}</h2>
-      <p className="article-content">{content}</p>
+      <div className="article-content" dangerouslySetInnerHTML={{ __html: content }} />
       {galleryImages && galleryImages.length > 0 && (
         <Slideshow images={galleryImages} autoPlay autoPlayTime={4000} />
       )}
@@ -39,7 +52,7 @@ function Article({ id, title, content, image, link, pdfLinks, galleryImages }) {
       )}
       {link && (
         <a href={link} className="article-link" target="_blank" rel="noopener noreferrer">
-          View Project
+          View Website
         </a>
       )}
     </div>
@@ -70,20 +83,19 @@ function Articles() {
         title="ExpenseMate - Expense Tracker App"
         content="ExpenseMate is a fully functional expense tracker app that helps users manage their finances effectively. Built using React and Node.js, it features an intuitive interface, real-time data updates, and insightful analytics through various charts. The app was designed with a focus on user experience and scalability, making it a powerful tool for personal finance management."
         image={expenseMateImage}
-        link="https://github.com/alisotoudehpsn4/expensemate"
+        link="https://expense-mate-seven.vercel.app/"
       />
       <Article
         id="project2"
         title="Taskify - Task Management App"
         content="Taskify is a task management application developed using React, which allows users to manage their tasks efficiently. The app includes features like adding, editing, and deleting tasks, as well as integration with external calendars. This project was an opportunity to explore React's capabilities and to develop a highly responsive and user-friendly interface."
         image={taskifyImage}
-        link="https://github.com/alisotoudehpsn4/taskify"
+        link="https://alisotoudehpsn4.github.io/taskify/"
       />
-      
       <Article
         id="wealtheon"
         title="Wealtheon - Educational Platform"
-        content="As a Full Stack Developer for Wealtheon, I was responsible for developing an educational platform that enhanced the company's existing online offerings. The project involved creating a secure, scalable backend using CakePHP, coupled with a dynamic, user-friendly frontend. My work ensured seamless integration between the various components of the platform, providing a smooth experience for both administrators and end-users."
+        content="As a Full Stack Developer for Wealtheon, I was responsible for developing an educational platform that enhanced the company's existing online offerings. The project involved creating a secure, scalable backend using CakePHP, coupled with a dynamic, user-friendly frontend. My work ensured seamless integration between the various components of the platform, providing a smooth experience for both administrators and end-users. Access to the educational platform is available by contacting Wealtheon directly through their website at <a href='https://wealtheon.com.au' target='_blank' rel='noopener noreferrer'>wealtheon.com.au</a> for further details."
         galleryImages={[
           wealtheonImage1,
           wealtheonImage2,
@@ -91,7 +103,7 @@ function Articles() {
           wealtheonImage4,
           wealtheonImage5,
         ]}
-        link="https://wealtheon.com.au"
+        link="https://wealtheon.au"
       />
     </div>
   );

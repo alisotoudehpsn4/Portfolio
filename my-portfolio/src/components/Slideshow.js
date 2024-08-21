@@ -12,6 +12,11 @@ function Slideshow({ images, autoPlay = true, autoPlayTime = 3000 }) {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
+  const openImageInNewTab = () => {
+    const currentImage = images[currentIndex];
+    window.open(currentImage, '_blank'); // Opens the image in a new tab
+  };
+
   useEffect(() => {
     if (autoPlay) {
       const interval = setInterval(nextSlide, autoPlayTime);
@@ -26,7 +31,7 @@ function Slideshow({ images, autoPlay = true, autoPlayTime = 3000 }) {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div className="slide" key={index}>
+          <div className="slide" key={index} onClick={openImageInNewTab}>
             <img src={image} alt={`Slide ${index + 1}`} />
           </div>
         ))}

@@ -1,4 +1,7 @@
 /* Global Styles - index.css */
+html {
+  scroll-behavior: smooth;
+}
 
 /* Universal Box Sizing */
 *,
@@ -32,16 +35,31 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Links */
 a {
-  color: #e74c3c; /* Bold, standout link color */
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease-in-out;
+  color: #e74c3c; /* Link color matching the border color */
+  text-decoration: none; /* Remove the default underline */
+  position: relative; /* Allows us to position the underline */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for color and text-shadow */
 }
 
-a:hover {
-  color: #c0392b; /* Darken on hover */
-  text-decoration: underline;
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e74c3c; /* Underline color matching the link */
+  visibility: hidden; /* Hide by default */
+  transform: scaleX(0); /* Start with no underline */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the underline */
 }
+
+
+a:hover::before {
+  visibility: visible; /* Show the underline */
+  transform: scaleX(1); /* Animate the underline */
+}
+
 
 /* Buttons */
 button {
@@ -56,10 +74,7 @@ button {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
-  background-color: #c0392b;
-  transform: scale(1.05);
-}
+
 
 button:focus {
   outline: none;

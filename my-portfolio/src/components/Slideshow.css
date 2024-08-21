@@ -28,8 +28,9 @@
   top: 50%;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Positions buttons at the edges */
   transform: translateY(-50%);
+  padding: 0 20px; /* Adds space from the edges */
 }
 
 .nav-buttons button {
