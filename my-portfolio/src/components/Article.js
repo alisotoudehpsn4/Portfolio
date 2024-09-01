@@ -29,12 +29,13 @@ function Article({ id, title, content, image, link, pdfLinks, galleryImages }) {
           onClick={() => openImageInNewTab(image)} // Opens the image in a new tab when clicked
           style={{ cursor: 'pointer' }} // Changes cursor to indicate clickability
         />
+      )} 
+       {galleryImages && galleryImages.length > 0 && (
+        <Slideshow images={galleryImages} autoPlay autoPlayTime={4000} />
       )}
       <h2 className="article-title">{title}</h2>
       <div className="article-content" dangerouslySetInnerHTML={{ __html: content }} />
-      {galleryImages && galleryImages.length > 0 && (
-        <Slideshow images={galleryImages} autoPlay autoPlayTime={4000} />
-      )}
+    
       {pdfLinks && (
         <div className="article-pdf-links">
           {pdfLinks.map((pdf, index) => (

@@ -1,74 +1,148 @@
 /* Header Styles - Header.css */
 
 .header {
-    width: 100%;
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    border-bottom: 4px solid #e74c3c;
-  }
+  position: sticky;
+  height: 100px;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 0; /* Remove any padding */
+  border-bottom: 2px solid #e74c3c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0; /* Ensure no padding to allow full width usage */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+  justify-content: center; /* Center the profile picture, name, title, and taglines */
+  text-align: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+h1, .tagline, .secondary-tagline {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.tagline {
+  color: #eee;
+  font-size: 1rem;
+}
+
+.secondary-tagline {
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: flex-end; /* Align the icons to the right */
+  flex-shrink: 0; /* Prevent the icons from shrinking when space is limited */
+}
+
+.contact-item {
+  font-size: 1.1rem;
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.contact-item i {
+  color: #e74c3c;
+}
+
+.contact-item:hover i {
+  color: #bdc3c7;
+}
+
+.toggle-btn {
+  font-size: 28px;
+  color: #768aa5;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  margin-left: 20px; /* Remove any left margin */
+  padding-left: 0; /* Ensure no left padding */
+  position: relative; /* Relative positioning to allow finer control */
   
+}
+
+.toggle-btn:hover {
+  color: #e74c3c;
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0; /* Ensure no padding in mobile view */
+    height: 200px;
+  }
+
   .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
-  
-  .profile-pic {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin-bottom: 15px;
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: -50px; /* Move content up */
   }
-  
+
   h1 {
-    font-weight: 800;
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    border-bottom: 5px solid #e74c3c;
-    padding-bottom: 0.3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    width: fit-content;
+    font-size: 1.3rem;
+    text-align: center;
   }
-  
-  .tagline {
-    color: #eee;
-    font-style: italic;
-    margin-top: 10px;
-    font-size: 1.75rem;
+
+  .tagline, .secondary-tagline {
+    text-align: center;
   }
-  
-  .secondary-tagline {
-    color: #ddd;
-    font-size: 1.25rem;
-    margin-top: 5px;
-  }
-  
-  /* Contact Info Styling */
+
   .contact-info {
-    margin-top: 20px;
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px; /* Increased gap for more space between icons */
+    margin-top: 10px;
   }
-  
-  .contact-item {
-    font-size: 1.5rem;
-    color: #ecf0f1;
-    text-decoration: none;
+
+  .toggle-btn {
+    
+    align-self: flex-start;
+    
   }
-  
-  .contact-item i {
-    color: #e74c3c; /* Icon color */
-  }
-  
-  .contact-item:hover i {
-    color: #bdc3c7; /* Change icon color on hover */
-  }
-  
+}

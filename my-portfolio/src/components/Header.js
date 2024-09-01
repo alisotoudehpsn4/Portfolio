@@ -2,14 +2,17 @@ import React from 'react';
 import './Header.css';
 import profilePicture from '../assets/images/profilepicture.jpg';
 
-function Header() {
+function Header({ toggleSidebar }) {
   return (
     <header className="header">
       <div className="header-container">
-        <img src={profilePicture} alt="Ali Sotoudeh" className="profile-pic" />
-        <h1>Ali Sotoudeh</h1>
-        <p className="tagline">Software Developer</p>
-        <p className="secondary-tagline">Passionate about creating impactful digital solutions.</p>
+        <button className="toggle-btn" onClick={toggleSidebar}>☰</button>
+        <div className="header-content">
+          <img src={profilePicture} alt="Ali Sotoudeh" className="profile-pic" />
+          <h1>Ali Sotoudeh</h1>
+          <p className="tagline">Software Developer</p>
+          <p className="secondary-tagline">Passionate about creating impactful digital solutions.</p>
+        </div>
         <div className="contact-info">
           <a href="tel:+61434031715" className="contact-item">
             <i className="fas fa-phone"></i>

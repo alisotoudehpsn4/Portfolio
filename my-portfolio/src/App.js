@@ -17,11 +17,18 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const toggleSidebar = () => {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    sidebar.classList.toggle('show');
+    overlay.classList.toggle('show');
+  };
+
   return (
     <div className={`app-container ${isLoaded ? 'loaded' : ''}`}>
       <Sidebar />
       <div className={`main-content ${isLoaded ? 'loaded' : ''}`}>
-        <Header />
+        <Header toggleSidebar={toggleSidebar} />
         <main className="content">
           <Articles />
         </main>

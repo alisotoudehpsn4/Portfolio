@@ -13,6 +13,23 @@
     transition: transform 0.3s ease-in-out;
 }
 
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ecf0f1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    color: #e74c3c;
+  }
+  
+
 .sidebar.show {
     transform: translateX(0);
 }
@@ -57,23 +74,7 @@
     color: #2980b9; /* Slightly darker on hover */
 }
 
-.toggle-btn {
-    position: fixed;
-    top: 25px; /* Adjusted for better spacing */
-    left: 20px;
-    z-index: 1100;
-    font-size: 30px;
-    color: #768aa5;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
 
-.toggle-btn:hover {
-    color: #e74c3c;
-    transform: scale(1.1);
-}
 
 .business-hours {
     padding: 15px 20px;
@@ -153,23 +154,6 @@
     .sidebar a {
         padding: 15px 20px; /* Comfortable padding */
         font-size: 16px; /* Slightly larger font for better readability on small screens */
-    }
-
-    .toggle-btn {
-        font-size: 26px;
-        top: 20px; /* Adjusted for spacing */
-        left: 20px; /* Same spacing as desktop for consistency */
-        z-index: 1100;
-        color: #768aa5;
-        background: none;
-        border: none;
-        cursor: pointer;
-        transition: color 0.2s ease, transform 0.2s ease;
-    }
-
-    .toggle-btn:hover {
-        color: #050505;
-        transform: scale(1.1);
     }
 
     .sidebar-divider {
